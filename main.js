@@ -48,14 +48,11 @@ function addToLocal(){
 
 function completedTask(index){
    
-   
-    tasks[index].done =!tasks[index].done;
+   tasks[index].done =!tasks[index].done;
     if( tasks[index].done){
         todoItemElement[index].classList.add('checked')
 
-        
-}
-    else{
+    }else{
         todoItemElement[index].classList.remove('checked')
     }
     addToLocal();
