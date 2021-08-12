@@ -3,9 +3,8 @@ const inputField = document.getElementById("descriptionOfATask")
 
 const listOfTasks = document.getElementById("listOfTasks")
 
-
-let tasks;
-!localStorage.tasks ? tasks = [] : tasks = JSON.parse(localStorage.getItem('tasks'))
+// console.log(localStorage.tasks)
+let tasks = !localStorage.tasks ? [] : JSON.parse(localStorage.getItem('tasks'))
 
 function Task(description){
     this.description = description;
@@ -13,7 +12,7 @@ function Task(description){
 }
 function createList(task, index){
     return `
-    <div class="item${task.done ? 'checked' : ' '}">
+    <div class="item ${task.done ? 'checked' : ' '}">
        <div class ="checkboxAndDescription">
       <input onclick="completedTask(${index})" class="completed" type="checkbox"${task.done? 'checked':' '}>
       <div class = "description">${task.description}</div>
@@ -76,3 +75,9 @@ function deleteTask(index){
     addToLocal()
     fillList()
 }
+
+// delete after this
+
+
+
+

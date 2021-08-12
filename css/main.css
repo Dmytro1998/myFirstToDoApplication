@@ -10,7 +10,7 @@ body {
   box-sizing: border-box;
   padding: 100px 80px; }
 
-.background {
+.wrapper {
   height: max-content;
   width: max-content;
   background-color: #0d0d0d;
@@ -40,19 +40,21 @@ h1, h2 {
   justify-content: space-between; }
 
 #addtask {
-  height: 45px;
+  height: 49px;
   border-radius: 19px;
   width: 54px;
-  border: none;
+  border: 3px solid black;
   font-size: 15px;
-  background-color: cornsilk;
+  background-color: white;
   font-family: 'Darker Grotesque', sans-serif;
   font-weight: 700;
   color: black;
   margin-left: 10px; }
 
 #addtask:hover {
-  background-color: #80033f;
+  background-color: black;
+  border: 3px solid white;
+  color: white;
   transition-duration: 0.5s; }
 
 .item {
@@ -83,10 +85,10 @@ h1, h2 {
   text-decoration: line-through;
   text-decoration-color: grey; }
 
-.itemchecked .completed {
+.item.checked .completed {
   border: 2px solid grey; }
 
-.itemchecked .description {
+.item.checked .description {
   color: grey; }
 
 .completed {
@@ -112,12 +114,25 @@ h1, h2 {
   height: 45px;
   border-radius: 19px;
   width: 54px;
-  border: none;
+  border: 3px solid white;
   font-size: 15px;
-  background-color: #854a67;
+  background-color: red;
   font-family: 'Darker Grotesque', sans-serif;
   font-weight: 700;
-  color: black;
+  color: white;
   margin-left: 10px; }
+
+.delete:hover {
+  height: 45px;
+  border-radius: 19px;
+  width: 54px;
+  border: 3px solid red;
+  font-size: 15px;
+  background-color: white;
+  font-family: 'Darker Grotesque', sans-serif;
+  font-weight: 700;
+  color: red;
+  margin-left: 10px;
+  transition-duration: 0.5s; }
 
 /*# sourceMappingURL=main.css.map */

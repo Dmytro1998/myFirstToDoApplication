@@ -14,7 +14,7 @@ body{
 }
     
   
-.background{
+.wrapper{
     height: max-content;
     width: max-content;
     background-color: $background-color-for-app;
@@ -49,19 +49,21 @@ h1,h2{
 }
 
 #addtask{
-    height: 45px;
+    height: 49px;
     border-radius: 19px;
     width: 54px;
-    border: none;
+    border: 3px solid black;
     font-size: 15px;
-    background-color: cornsilk;
+    background-color: $white-coloor-for-this-project;
     font-family: 'Darker Grotesque', sans-serif;
     font-weight: 700;
     color: black;
     margin-left: $margin-left-for-btn;
 }
 #addtask:hover{
-    background-color: rgb(128, 3, 63);
+    background-color:black;
+    border:3px solid $white-coloor-for-this-project;
+    color: $white-coloor-for-this-project;
     transition-duration: 0.5s;
 
 
@@ -102,11 +104,11 @@ h1,h2{
     text-decoration-color: $color-for-completed-task;
     
 }
-.itemchecked .completed{
+.item.checked .completed{
     border: 2px solid $color-for-completed-task;
    
 }
-.itemchecked .description{
+.item.checked .description{
     color: $color-for-completed-task;
 }
 .completed{
@@ -133,11 +135,24 @@ h1,h2{
     height: 45px;
     border-radius: 19px;
     width: 54px;
-    border: none;
+    border: 3px solid white;
     font-size: 15px;
-    background-color: rgb(133, 74, 103);
+    background-color: red;
     font-family: 'Darker Grotesque', sans-serif;
     font-weight: 700;
-    color: black;
+    color: $white-coloor-for-this-project;
     margin-left: $margin-left-for-btn;
+}
+.delete:hover{
+    height: 45px;
+    border-radius: 19px;
+    width: 54px;
+    border: 3px solid red;
+    font-size: 15px;
+    background-color: white;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 700;
+    color: red;
+    margin-left: $margin-left-for-btn;
+    transition-duration: 0.5s;
 }
